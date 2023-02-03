@@ -1,3 +1,8 @@
+<img src="public/Hero_Github.png" width='100%" />
+
+<br />
+<br />
+
 ![npm](https://img.shields.io/npm/v/@pillar/sdk)
 [![Build Status](https://workos.semaphoreci.com/badges/workos-python/branches/main.svg?style=shields&key=9e4cb5bb-86a4-4938-9ec2-fc9f9fc512be)](https://workos.semaphoreci.com/projects/workos-python)
 
