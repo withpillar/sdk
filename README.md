@@ -20,7 +20,7 @@ npm i @pillar/sdk
 It is possible to use the Pillar Core SDK without any bundler.
 Head over to the release page to download our UMD build.
 
-In that case, you will need to include the
+In that case, you will need to include the script tag in your webpage.
 
 ## Embed SDK
 
@@ -48,7 +48,7 @@ By default your tenant URL will be https://platform.withpillar.com
 Example
 
 ```js
-import { PillarSDK } from "@pillar/sdk/core";
+import { PillarSDK } from "@pillar/core";
 
 PillarSDK.init({
   publicKey: process.env.PUBLIC_KEY,

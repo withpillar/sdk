@@ -11,14 +11,14 @@ type PillarSDKEmbedOptions = {
   iframeOptions?: Partial<HTMLIFrameElement>;
 };
 
-export const toStringValues = <O extends Record<string, unknown>>(o: O) =>
+const toStringValues = <O extends Record<string, unknown>>(o: O) =>
   fromEntries(
     entries<Record<string, unknown>>(o ?? ({} as Record<string, unknown>)).map(
       ([k, v]) => [k, "" + v]
     )
   );
 
-export const buildEmbedURL = (opts: PillarSDKEmbedOptions) => {
+const buildEmbedURL = (opts: PillarSDKEmbedOptions) => {
   const params = new URLSearchParams({
     publicKey: opts.publicKey,
     ...toStringValues(opts.embed),
