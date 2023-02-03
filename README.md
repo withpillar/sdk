@@ -26,7 +26,7 @@ In that case, you will need to include the
 
 The embed SDK allows our partner to embed ready to use widgets and user flows in 3 lines of codes.
 
-Widgets will be rendered as "chromeless" iframes that can be integrated in any web or mobile page
+Widgets will be rendered as "chromeless" iframes that can be integrated in any web or mobile page.
 
 ### PREREQUISITES
 
