@@ -44,7 +44,7 @@ const renderIframe = (element: HTMLDivElement, opts: PillarSDKEmbedOptions) => {
   element.insertAdjacentElement("afterbegin", iframe);
 };
 
-const PillarSDK = {
+export const PillarSDK = {
   frameEventsConsumer: new FrameEventsConsumer(),
   render: (elementId: string, opts: PillarSDKEmbedOptions) => {
     const element = document.querySelector(elementId) as HTMLDivElement | null;
