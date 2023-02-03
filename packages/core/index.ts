@@ -3,7 +3,7 @@ import { SupportedEmbeds } from "./types";
 import { BaseFrameEventListener, FrameEventsConsumer } from "./events";
 import { entries, fromEntries } from "./minimalLib";
 
-type PillarSDKEmbedOptions = {
+export type PillarSDKEmbedOptions = {
   baseURL: string;
   publicKey: string;
   organizationName: string;
