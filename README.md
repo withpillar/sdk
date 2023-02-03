@@ -1,5 +1,4 @@
-<img src="public/Hero_Github.png" width='100%" />
-
+![Pillar SDK](public/Hero_Github_animated.svg)
 <br />
 <br />
 
