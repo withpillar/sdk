@@ -11,7 +11,7 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "publish-packages": "turbo run build lint && changeset && changeset version && git add . && git commit -m 'release'"
+    "prepare-publish-packages": "turbo run build lint && changeset && changeset version && git add . && git commit -m 'release'"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
