@@ -1,6 +1,6 @@
 {
-  "name": "@pillar/core",
-  "version": "0.2.0",
+  "name": "@withpillar/core",
+  "version": "0.1.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "license": "ISC",

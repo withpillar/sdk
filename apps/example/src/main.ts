@@ -1,1 +1,1 @@
-import {} from "@pillar/sdk/core";
+import {} from "@withpillar/core";

@@ -1,1 +1,1 @@
-export * from "@pillar/core";
+export * from "@withpillar/core";

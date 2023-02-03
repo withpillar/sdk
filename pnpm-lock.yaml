@@ -14,13 +14,15 @@ importers:
       prettier: 2.8.3
       turbo: 1.7.3
 
-  "apps/\x15example":
+  apps/example:
     specifiers:
-      '@pillar/sdk': workspace:*
+      '@withpillar/core': workspace:*
+      '@withpillar/sdk': workspace:*
       typescript: ^4.9.3
       vite: ^4.1.0
     devDependencies:
-      '@pillar/sdk': link:../../packages/sdk
+      '@withpillar/core': link:../../packages/core
+      '@withpillar/sdk': link:../../packages/sdk
       typescript: 4.9.5
       vite: 4.1.1
 
@@ -61,14 +63,14 @@ importers:
 
   packages/sdk:
     specifiers:
-      '@pillar/core': workspace:*
+      '@withpillar/core': workspace:*
       eslint: ^8.33.0
       eslint-config-custom: workspace:*
       tsconfig: workspace:*
       tsup: ^6.5.0
       typescript: ^4.9.5
     dependencies:
-      '@pillar/core': link:../core
+      '@withpillar/core': link:../core
     devDependencies:
       eslint: 8.33.0
       eslint-config-custom: link:../eslint-config-custom
