@@ -1,73 +1,61 @@
-# Turborepo starter
+![npm](https://img.shields.io/npm/v/@pillar/sdk)
+[![Build Status](https://workos.semaphoreci.com/badges/workos-python/branches/main.svg?style=shields&key=9e4cb5bb-86a4-4938-9ec2-fc9f9fc512be)](https://workos.semaphoreci.com/projects/workos-python)
 
-This is an official pnpm starter turborepo.
+Build quality care experiences fast with the official Pillar SDK.
 
-## What's inside?
+## Installation
 
-This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
+To install from npm, run the following:
 
 ```
-cd my-turborepo
-pnpm run build
+npm i @pillar/sdk
 ```
 
-### Develop
+### UMD Build
 
-To develop all apps and packages, run the following command:
+It is possible to use the Pillar Core SDK without any bundler.
+Head over to the release page to download our UMD build.
 
-```
-cd my-turborepo
-pnpm run dev
-```
+In that case, you will need to include the
 
-### Remote Caching
+## Embed SDK
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+The embed SDK allows our partner to embed ready to use widgets and user flows in 3 lines of codes.
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+Widgets will be rendered as "chromeless" iframes that can be integrated in any web or mobile page
 
-```
-cd my-turborepo
-pnpm dlx turbo login
-```
+### PREREQUISITES
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+If you use Content-Security-Policy Headers, make sure that:
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
+- `frame-src` allows for `platform.withpillar.com`
+- `script-src` allows for you vendored version of the js sdk. Using a nonce is recommended
 
-```
-pnpm dlx turbo link
+```html
+<script src="/path/to/sdk.vX.XX.js" nonce="a-random-string" />
 ```
 
-## Useful Links
+### Authentication
 
-Learn more about the power of Turborepo:
+The package will need to be configured with your [public key] and your tenant URL.
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+By default your tenant URL will be https://platform.withpillar.com
+
+Example
+
+```js
+import { PillarSDK } from "@pillar/sdk/core";
+
+PillarSDK.init({
+  publicKey: process.env.PUBLIC_KEY,
+  tenantURL: "https://platform.withpillar.com",
+});
+```
+
+## SDK Versioning
+
+All of our SDKS follows a Semantic Versioning ([SemVer](https://semver.org/)) process where all releases will have a version X.Y.Z (like 1.0.0) pattern wherein Z would be a bug fix (e.g., 1.0.1), Y would be a minor release (1.1.0) and X would be a major release (2.0.0). We permit any breaking changes to only be released in major versions and strongly recommend reading changelogs before making any major version upgrades.
+
+## More Information
+
+Contact your account manager for any questions!
