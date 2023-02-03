@@ -1,0 +1,15 @@
+{
+  "name": "@pillar/sdk",
+  "private": false,
+  "main": "./index.ts",
+  "dependencies": {
+    "@pillar/core": "workspace:*"
+  },
+  "devDependencies": {
+    "eslint": "^8.33.0",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "@pillar/core": "workspace:*",
+    "typescript": "^4.9.5"
+  }
+}
