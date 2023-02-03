@@ -1,4 +1,4 @@
-![Pillar SDK](public/Hero_Github_animated.svg)
+![Pillar SDK](public/Hero_Github.svg)
 <br />
 <br />
 
