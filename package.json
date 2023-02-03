@@ -11,7 +11,8 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare-publish-packages": "turbo run build lint && changeset && changeset version && git add . && git commit -m 'release'"
+    "prepare-publish-packages": "turbo run build lint && changeset && changeset version && git add . && git commit -m 'release'",
+    "publish-min-packages": "cd packages/core && npm publish && cd ../sdk && npm publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.0",
